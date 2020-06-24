@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/api/app" isTestSource="false" packagePrefix="App\" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/doctrine/inflector" />
@@ -18,6 +19,7 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/facade/ignition-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/fruitcake/laravel-cors" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/jakub-onderka/php-console-color" />
