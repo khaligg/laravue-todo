@@ -42,8 +42,11 @@ class TodoRepository implements TodoRepositoryInterface
     {
         try {
             $todo->delete();
-            return response('Deleted', 200);
+
         } catch (\Exception $e) {
+            console.log($e);
         }
+
+        return response('Deleted', 200);
     }
 }

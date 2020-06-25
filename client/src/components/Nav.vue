@@ -1,32 +1,34 @@
 <template>
-    <div>
-        <nav class="nav nav-pills">
-            <li class="nav-item">
-                <router-link class="nav-link" :to="{name: 'home'}">
-                    Home
-                </router-link>
-            </li>
-            <template v-if="authenticated">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <nav class="nav nav-pills">
                 <li class="nav-item">
-                    <router-link class="nav-link" :to="{name: 'dashboard'}" >
-                        Dashboard
+                    <router-link class="nav-link" :to="{name: 'home'}">
+                        Home
                     </router-link>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" @click.prevent="signOut()">Signout</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link disabled" aria-disabled="true">{{ user.name }}</a>
-                </li>
-            </template>
-            <template v-else>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="{name: 'signin'}" >
-                        SignIn
-                    </router-link>
-                </li>
-            </template>
-        </nav>
+                <template v-if="authenticated">
+                    <li class="nav-item">
+                        <router-link class="nav-link" :to="{name: 'todo'}" >
+                            Todo List
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" @click.prevent="signOut()">Signout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link disabled" aria-disabled="true">{{ user.name }}</a>
+                    </li>
+                </template>
+                <template v-else>
+                    <li class="nav-item">
+                        <router-link class="nav-link" :to="{name: 'login'}" >
+                            Login
+                        </router-link>
+                    </li>
+                </template>
+            </nav>
+        </div>
     </div>
 </template>
 

@@ -1,10 +1,15 @@
 <template>
  <div id="app">
      <div class="container-fluid">
-         <div class="container-nav">
-             <Nav/>
+         <div class="row">
+             <div class="col-md-6 mx-auto">
+                <Nav/>
+                 <hr>
+             </div>
          </div>
-         <router-view/>
+         <div class="col-md-6 mx-auto">
+             <router-view/>
+         </div>
      </div>
   </div>
 </template>
@@ -20,8 +25,7 @@
 </script>
 
 <style>
-    .container-nav {
+    #app {
         padding: 20px;
-        text-align: center;
     }
 </style>

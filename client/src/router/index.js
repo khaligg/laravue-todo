@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import SignIn from '../views/SignIn.vue'
-import Dashboard from '../views/Dashboard.vue'
+import Login from '../views/Login.vue'
+import Todo from '../views/Todo.vue'
 import store from '@/store'
 
 Vue.use(VueRouter)
@@ -14,9 +14,9 @@ const routes = [
       component: Home
     },
     {
-      path: '/signin',
-      name: 'signin',
-      component: SignIn,
+      path: '/login',
+      name: 'login',
+      component: Login,
         beforeEnter: (to, from, next) => {
             if (!store.getters['auth/authenticated']) {
                 return next()
@@ -25,9 +25,9 @@ const routes = [
         }
     },
     {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: Dashboard,
+      path: '/todo',
+      name: 'todo',
+      component: Todo,
         meta: {
             requiresAuth: true,
         },
@@ -43,7 +43,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
     if (to.meta.requiresAuth && !store.getters['auth/authenticated']) {
-        next('signin');
+        next('login');
     }
     else next();
 })
