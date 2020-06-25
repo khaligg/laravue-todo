@@ -1,7 +1,11 @@
 <template>
-  <div id="app">
-    <Nav/>
-    <router-view/>
+ <div id="app">
+     <div class="container-fluid">
+         <div class="container-nav">
+             <Nav/>
+         </div>
+         <router-view/>
+     </div>
   </div>
 </template>
 
@@ -14,3 +18,10 @@
     }
   }
 </script>
+
+<style>
+    .container-nav {
+        padding: 20px;
+        text-align: center;
+    }
+</style>

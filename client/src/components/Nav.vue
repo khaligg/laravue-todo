@@ -1,38 +1,32 @@
 <template>
     <div>
-        <ul>
-            <li>
-                <router-link :to="{
-                    name: 'home'
-                }">
+        <nav class="nav nav-pills">
+            <li class="nav-item">
+                <router-link class="nav-link" :to="{name: 'home'}">
                     Home
                 </router-link>
             </li>
             <template v-if="authenticated">
-                <li>
-                    <router-link :to="{
-                    name: 'dashboard'
-                }" >
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="{name: 'dashboard'}" >
                         Dashboard
                     </router-link>
                 </li>
-                <li>
-                    <a href="#" @click.prevent="signOut()">Signout</a>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" @click.prevent="signOut()">Signout</a>
                 </li>
-                <li>
-                    {{ user.name }}
+                <li class="nav-item">
+                    <a href="#" class="nav-link disabled" aria-disabled="true">{{ user.name }}</a>
                 </li>
             </template>
             <template v-else>
-                <li>
-                    <router-link :to="{
-                    name: 'signin'
-                }" >
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="{name: 'signin'}" >
                         SignIn
                     </router-link>
                 </li>
             </template>
-        </ul>
+        </nav>
     </div>
 </template>
 
@@ -62,7 +56,3 @@
         }
     }
 </script>
-
-<style scoped>
-
-</style>
