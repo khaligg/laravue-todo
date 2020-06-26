@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Todo from '../views/Todo.vue'
+import Finished from '../views/FinishedTodos.vue'
 import store from '@/store'
 
 Vue.use(VueRouter)
@@ -28,6 +29,14 @@ const routes = [
       path: '/todo',
       name: 'todo',
       component: Todo,
+        meta: {
+            requiresAuth: true,
+        },
+    },
+    {
+      path: '/finished',
+      name: 'finished',
+      component: Finished,
         meta: {
             requiresAuth: true,
         },

@@ -1,7 +1,11 @@
 <template>
-    <div>
-        <AddNewTodo/>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <AddNewTodo/>
+        </div>
+        <div class="col-md-6 mx-auto">
         <TodoList/>
+        </div>
     </div>
 </template>
 

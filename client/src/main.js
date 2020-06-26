@@ -11,6 +11,8 @@ axios.defaults.baseURL = 'http://127.0.0.1:8000/api'
 
 Vue.config.productionTip = false
 
+export const eventBus = new Vue();
+
 store.dispatch('auth/attempt', localStorage.getItem('token')).then(()=>{
   new Vue({
     router,

@@ -4,11 +4,11 @@
       <div class="login-form">
         <form @submit.prevent="submit">
           <div class="form-group text-center">
-            <label for="email">Email address</label>
+            <label for="email">Email</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" v-model="form.email">
           </div>
           <div class="form-group text-center">
-            <label for="password">Password</label>
+            <label for="password">Şifre</label>
             <input type="password" class="form-control" id="password" v-model="form.password">
           </div>
           <button type="submit" class="btn btn-primary btn-block">Submit</button>
@@ -42,7 +42,7 @@ export default {
       this.signIn(this.form).then(()=>{
 
           this.$router.replace({
-            name: 'dashboard'
+            name: 'todo'
           })
 
       })
