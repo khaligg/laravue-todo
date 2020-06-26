@@ -1,2 +1,2 @@
-# lycee
-lycee project desc
+# Laravel + Vue ToDoList App
+
