@@ -12,6 +12,10 @@ class TodoRepository implements TodoRepositoryInterface
         return Todo::all();
     }
 
+    public function show($id) {
+        return Todo::find($id);
+    }
+
     public function store(Request $request)
     {
         $data = $request->validate([
